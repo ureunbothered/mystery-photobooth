@@ -88,11 +88,10 @@ function applyVintageFilter(ctx, w, h) {
     // contrast
     v = (v - 128) * 1.4 + 128;
 
-// grayscale only, higher contrast
-    d[i]     = Math.min(255, v * 1.02 + 8);   // red channel
-    d[i + 1] = Math.min(255, v * 0.97 + 4);   // green channel
-    d[i + 2] = Math.min(255, v * 0.90);       // blue channel
-
+// grayscale only, light sepia
+d[i]     = Math.min(255, v * 1.02 + 8);
+d[i + 1] = Math.min(255, v * 0.97 + 4);
+d[i + 2] = Math.min(255, v * 0.90);
   }
 
   ctx.putImageData(imgData, 0, 0);

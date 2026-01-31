@@ -164,7 +164,7 @@ function buildStrip() {
   const ctx = canvas.getContext("2d");
 
   // background
-  ctx.fillStyle = "#5a1a1a";
+  ctx.fillStyle = "#0a0303";
   ctx.fillRect(0, 0, stripWidth, stripHeight);
 
   // title

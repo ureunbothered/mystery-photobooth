@@ -89,9 +89,9 @@ function applyVintageFilter(ctx, w, h) {
     v = (v - 128) * 1.4 + 128;
 
 // grayscale only, higher contrast
-d[i]     = Math.min(255, v * 1.6); // red
-d[i + 1] = Math.min(255, v * 1.6); // green
-d[i + 2] = Math.min(255, v * 1.6); // blue
+    d[i]     = Math.min(255, v * 1.02 + 8);   // red channel
+    d[i + 1] = Math.min(255, v * 0.97 + 4);   // green channel
+    d[i + 2] = Math.min(255, v * 0.90);       // blue channel
 
   }
 

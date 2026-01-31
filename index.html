@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photo Booth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1 class="title">Ure's 30th Murder Mystery Party</h1>
+
+    <div class="camera-wrapper">
+      <video id="camera" autoplay playsinline></video>
+      <div id="countdown"></div>
+    </div>
+
+    <input type="text" id="customText" placeholder="Leave a message for Ure (max 60 characters)" maxlength="60">
+
+    <button class="primary" onclick="startSession()">Take Photos</button>
+<div id="result"></div>
+<button class="secondary" id="downloadBtn" onclick="downloadStrip()" style="display:none">Download Strip</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

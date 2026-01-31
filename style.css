@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'Playwrite India Guides';
+  src: url('PlaywriteIndiaGuides-Regular.ttf') format('truetype');
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #5a1a1a;
+  font-family: 'Playwrite India Guides', cursive, sans-serif;
+  color: #f5f0e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#app {
+  text-align: center;
+  padding: 10px;
+  max-width: 450px;
+  width: 100%;
+}
+
+.title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #f5f0e6;
+  text-shadow: none;
+  font-family: 'Playwrite India Guides', cursive;
+}
+
+.camera-wrapper {
+  position: relative;
+  margin-bottom: 12px;
+  border: 4px solid #3e0f0f;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+  filter: grayscale(1) contrast(1.4) brightness(1) sepia(0.05);
+  display: block;
+}
+
+#countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 65px;
+  font-weight: bold;
+  color: #f5f0e6;
+  text-shadow: 0 0 0px rgba(0,0,0,0.8);
+  pointer-events: none;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 2px solid #f5f0e6;
+  border-radius: 4px;
+  background: #5a1a1a;
+  color: #f5f0e6;
+  font-family: 'Playwrite India Guides', cursive;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-family: 'Playwrite India Guides', cursive;
+}
+
+button.primary {
+  background: #f5f0e6;
+  color: #5a1a1a;
+  border: 2px solid #3e0f0f;
+}
+
+button.primary:hover {
+  background: #e0d8c5;
+}
+
+button.secondary {
+  background: transparent;
+  color: #f5f0e6;
+  border: 2px solid #f5f0e6;
+}
+
+button.secondary:hover {
+  background: rgba(245, 240, 230, 0.1);
+}
+
+#result {
+  margin-top: 20px;
+}
+
+
+#result canvas {
+  width: 100%;
+  max-width: 100%;  /* scale down on small screens without stretching */
+  border: 4px solid #3e0f0f;
+  background: #5a1a1a;
+  display: block;
+  margin: 0 auto;
+}
+
